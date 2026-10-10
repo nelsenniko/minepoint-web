@@ -7,7 +7,7 @@
 // Backend: Node.js + Express + SQLite
 // ============================================
 
-const API_BASE_URL = "https://a75f247b66141b.lhr.life";
+const API_BASE_URL = "https://1bcb2ca2a17518.lhr.life";
 
 const MINING_DURATION_MS = 12 * 60 * 60 * 1000;
 const MINING_REWARD_PTS = 100;
