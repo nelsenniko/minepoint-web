@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://339c3e59fcc632.lhr.life";
+const API_BASE_URL = "https://3ba57908d20ded.lhr.life";
 const MINING_DURATION_MS = 12 * 60 * 60 * 1000;
 
 const tg = window.Telegram?.WebApp;
