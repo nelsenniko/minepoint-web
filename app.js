@@ -1,5 +1,5 @@
 
-const API_BASE_URL = "https://339c3e59fcc632.lhr.life";
+const API_BASE_URL = "https://edea5b3641e93e.lhr.life";
 
 const MINING_DURATION_MS = 12 * 60 * 60 * 1000;
 const MINING_REWARD_PTS = 100;
