@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B0618">
+  <title>MinePoint</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div class="logo">⛏️ MINEPOINT</div>
+      <div class="tagline">PLAY · MINE · EARN</div>
+    </header>
+
+    <section class="card">
+      <div class="section-title">🧑🏻‍🚀 PEMAIN</div>
+      <div id="username" class="username">Memeriksa Telegram...</div>
+      <div id="authStatus" class="status">Memeriksa akun...</div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">🪙 SALDO PTS</div>
+      <div id="balance" class="balance">0</div>
+      <div class="muted">Poin permainan MinePoint</div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">⛏️ MINING</div>
+      <p class="muted">Hadiah per sesi: <strong>100 PTS</strong></p>
+      <p class="muted">Durasi: <strong>12 jam</strong></p>
+
+      <div id="timer" class="timer">12:00:00</div>
+      <div id="miningStatus" class="status">Memuat status mining...</div>
+
+      <div class="progress-track">
+        <div id="progress" class="progress"></div>
+      </div>
+
+      <button id="mineButton">Mulai Mining</button>
+      <button id="claimButton" class="secondary" disabled>
+        Klaim Reward
+      </button>
+    </section>
+
+    <footer>PTS adalah poin permainan, bukan token kripto.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
