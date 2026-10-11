@@ -6,7 +6,7 @@
 // Telegram Mini App + Node.js + SQLite
 // ============================================
 
-const API_BASE_URL = "https://1bcb2ca2a17518.lhr.life";
+const API_BASE_URL = "https://ccd200e7173cd9.lhr.life";
 
 const MINING_DURATION_MS = 12 * 60 * 60 * 1000;
 const MINING_REWARD_PTS = 100;
