@@ -2,7 +2,7 @@
 "use strict";
 
 // Ganti URL ini setiap kali alamat tunnel berubah.
-const API_BASE_URL = "https://1bcb2ca2a17518.lhr.life";
+const API_BASE_URL = "https://b90b6144ce815c.lhr.life";
 
 const DURATION_MS = 12 * 60 * 60 * 1000;
 const REFRESH_MS = 15000;
