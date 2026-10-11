@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B0618">
+  <title>MinePoint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-icon">⛏</div>
+      <div class="brand">
+        <h1>MINEPOINT</h1>
+        <p>PLAY · MINE · EARN</p>
+      </div>
+      <div class="live-dot" title="MinePoint"></div>
+    </header>
+
+    <section id="homeTab" class="page active">
+      <div class="welcome">
+        <p class="eyebrow">AREA MINING</p>
+        <h2>Waktunya menambang.</h2>
+        <p class="muted">Mulai sesi dan kumpulkan poin permainan.</p>
+      </div>
+
+      <section class="card mining-card">
+        <div class="mining-symbol">⛏️</div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span id="miningStatus">Memuat status mining...</span>
+        </div>
+
+        <p class="eyebrow center">HADIAH PER SESI</p>
+        <div class="reward">100 <span>PTS</span></div>
+        <p class="muted center">Durasi sesi · 12 jam</p>
+
+        <div class="progress-heading">
+          <span>PROGRES MINING</span>
+          <strong id="progressPercent">0%</strong>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-fill"></div>
+        </div>
+
+        <p class="eyebrow center timer-label">WAKTU TERSISA</p>
+        <div id="miningTimer" class="timer">12:00:00</div>
+
+        <button id="miningActionBtn" class="primary-btn" disabled>
+          Memeriksa status...
+        </button>
+        <p class="helper-text">Reward dapat diklaim setelah sesi selesai.</p>
+      </section>
+
+      <div class="info-card">
+        <div class="info-icon">✦</div>
+        <div>
+          <strong>Terus kumpulkan PTS</strong>
+          <p class="muted">Selesaikan sesi mining untuk memperoleh 100 PTS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shopTab" class="page">
+      <div class="welcome">
+        <p class="eyebrow">MARKETPLACE</p>
+        <h2>Shop</h2>
+        <p class="muted">Temukan item untuk pengalaman bermainmu.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛍️</div>
+        <h3>Item permainan</h3>
+        <p class="muted">Katalog item sedang disiapkan.</p>
+        <span class="coming-soon">SEGERA HADIR</span>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3>Pembayaran TON</h3>
+        <p class="muted">Pembelian belum aktif. Jangan mengirim TON ke alamat mana pun dari halaman ini.</p>
+        <span class="coming-soon">DIRANCANG UNTUK VERSI BERIKUTNYA</span>
+      </div>
+    </section>
+
+    <section id="walletTab" class="page">
+      <div class="welcome">
+        <p class="eyebrow">ASET PERMAINAN</p>
+        <h2>Wallet</h2>
+        <p class="muted">Pantau poin permainan MinePoint kamu.</p>
+      </div>
+
+      <div class="wallet-card">
+        <p class="eyebrow">TOTAL SALDO</p>
+        <div class="wallet-balance"><span id="walletBalance">0</span> <small>PTS</small></div>
+        <p class="muted">Poin internal permainan MinePoint</p>
+        <div class="wallet-divider"></div>
+        <div class="wallet-row">
+          <span>Status akun</span>
+          <strong id="walletStatus">Memeriksa...</strong>
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <h3>Dompet TON</h3>
+        <p class="muted">Koneksi dompet dan riwayat transaksi akan ditambahkan setelah integrasi wallet siap.</p>
+        <span class="coming-soon">SEGERA HADIR</span>
+      </div>
+
+      <p class="disclaimer">PTS adalah poin permainan, bukan token kripto.</p>
+    </section>
+
+    <section id="profileTab" class="page">
+      <div class="welcome">
+        <p class="eyebrow">AKUN KAMU</p>
+        <h2>Profil</h2>
+        <p class="muted">Informasi pemain MinePoint.</p>
+      </div>
+
+      <div class="profile-card">
+        <div class="avatar">🚀</div>
+        <h3 id="profileName">Memeriksa Telegram...</h3>
+        <p id="profileConnection" class="muted">Menunggu autentikasi</p>
+        <div class="profile-divider"></div>
+        <div class="profile-row">
+          <span>ID Telegram</span>
+          <strong id="profileId">—</strong>
+        </div>
+        <div class="profile-row">
+          <span>Status</span>
+          <strong id="profileStatus">Memeriksa...</strong>
+        </div>
+      </div>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <nav class="bottom-nav" aria-label="Navigasi utama">
+      <button class="nav-item active" data-tab="homeTab">
+        <span class="nav-icon">⌂</span><span>Beranda</span>
+      </button>
+      <button class="nav-item" data-tab="shopTab">
+        <span class="nav-icon">▣</span><span>Shop</span>
+      </button>
+      <button class="nav-item" data-tab="walletTab">
+        <span class="nav-icon">◇</span><span>Wallet</span>
+      </button>
+      <button class="nav-item" data-tab="profileTab">
+        <span class="nav-icon">♙</span><span>Profil</span>
+      </button>
+    </nav>
+  </main>
+
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
